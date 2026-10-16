@@ -6,6 +6,7 @@ langchain-core
 langchain-community
 
 #LLM 
+langchain-anthropic
 langchain-openai
 langchain-groq
 langchain-text-splitters
