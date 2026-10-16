@@ -8,9 +8,12 @@ claude_key = os.getenv('CLAUDE_API_KEY')
 jina_key = os.getenv('JINA_API_KEY')
 
 
-DATA_FILE_PATH = os.path.join('/Users/raghavendra/Desktop/AI Engineering/BuildingRAG', 'HR Policy.txt')
+# The project folder (one level above HR_ASSISTANT/), so paths work on any machine
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-VECTOR_STORE_PATH = os.path.join('/Users/raghavendra/Desktop/AI Engineering/BuildingRAG', 'faiss_index')
+DATA_FILE_PATH = os.path.join(PROJECT_ROOT, 'HR Policy.txt')
+
+VECTOR_STORE_PATH = os.path.join(PROJECT_ROOT, 'faiss_index')
 
 LLM_MODEL_NAME = "claude-opus-5-5"
 EMBEDDING_MODEL_NAME = "jina-embeddings-v3"
